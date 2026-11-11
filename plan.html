@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan Your Trip · Brunei Tourism</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="logo"><a href="index.html">Brunei<span>.</span></a></div>
+    <button class="hamburger" aria-label="Toggle navigation menu"><i class="fas fa-bars"></i></button>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="discover.html" class="nav-link">Discover</a></li>
+      <li><a href="attractions.html" class="nav-link">Attractions</a></li>
+      <li><a href="plan.html" class="nav-link active">Plan</a></li>
+      <li><a href="events.html" class="nav-link">Events</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <div class="container">
+    
+    <!-- PAGE HEADER -->
+    <section class="page-intro">
+      <h1 class="section-title no-margin">Plan your trip</h1>
+      <p class="text-muted">Everything you need to know before you go, plus a personalised itinerary planner.</p>
+    </section>
+
+    <!-- PRACTICAL INFO CARDS -->
+    <div class="card-grid" style="margin-bottom: 2rem;">
+      <div class="card">
+        <i class="fas fa-plane-arrival"></i>
+        <h3>Getting There & Around</h3>
+        <p>Brunei International Airport (BWN) is the main gateway, served by Royal Brunei Airlines and other carriers. Getting around is easy with taxis, ride-hailing apps (Dart), and rental cars. Water taxis are essential for exploring Kampong Ayer.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-passport"></i>
+        <h3>Entry & Visa Guidance</h3>
+        <p>Many nationalities (including ASEAN, UK, and US) can enter visa-free for up to 90 days. All visitors must have a passport valid for at least 6 months and a confirmed return ticket. Check the official Immigration website in our footer for specific requirements.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-sun"></i>
+        <h3>Best Time to Visit</h3>
+        <p>Brunei has a tropical climate. The best time to visit is during the dry season from <strong>January to April</strong>. Avoid the heaviest rains which usually occur between November and December.</p>
+      </div>
+    </div>
+
+    <!-- INTERACTIVE TRIP PLANNER SECTION -->
+    <h2 class="section-title">Interactive Trip Planner</h2>
+    <p class="text-muted">Select your travel style and get a suggested 3-day itinerary.</p>
+
+    <!-- THE 4 CLICKABLE OPTIONS -->
+    <div class="plan-options">
+      <div class="plan-card" data-plan="nature">
+        <i class="fas fa-tree"></i>
+        <h4>Nature & Adventure</h4>
+      </div>
+      <div class="plan-card" data-plan="culture">
+        <i class="fas fa-mosque"></i>
+        <h4>Culture & Heritage</h4>
+      </div>
+      <div class="plan-card" data-plan="relax">
+        <i class="fas fa-spa"></i>
+        <h4>Relax & Luxury</h4>
+      </div>
+      <div class="plan-card" data-plan="family">
+        <i class="fas fa-users"></i>
+        <h4>Family Fun</h4>
+      </div>
+    </div>
+
+    <!-- THE BOX WHERE THE JS WILL SHOW THE ITINERARY -->
+    <div class="plan-summary" id="planSummary">
+      <p class="text-muted"><i class="fas fa-arrow-pointer"></i> Select a travel style above to see a suggested itinerary.</p>
+    </div>
+
+  </div> <!-- END OF CONTAINER -->
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-info">
+        <h4>Brunei Tourism</h4>
+        <p>Ministry of Primary Resources and Tourism</p>
+        <p>Bandar Seri Begawan, Brunei Darussalam</p>
+      </div>
+      <div class="footer-links">
+        <h4>Travel Resources</h4>
+        <ul>
+          <li><a href="https://www.bruneitourism.com/" target="_blank" rel="noopener">Official Brunei Tourism Portal</a></li>
+          <li><a href="https://www.immigration.gov.bn/" target="_blank" rel="noopener">Brunei Immigration (Visas)</a></li>
+          <li><a href="https://www.moh.gov.bn/" target="_blank" rel="noopener">Ministry of Health (Travel Advisories)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Brunei Tourism — Built for Educational Purposes.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT TAG AT THE BOTTOM -->
+  <script src="script.js"></script>
+</body>
+</html>

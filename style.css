@@ -1,0 +1,584 @@
+/* =========================================
+   BRUNEI TOURISM - MAIN STYLESHEET
+   ========================================= */
+
+/* --- Basic Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #faf7f2;
+  color: #1e2a2f;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  background: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #eae3d7;
+}
+
+.logo a {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #0f3b2b;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #c49a6c;
+}
+
+/* Hamburger Menu Button (Hidden on Desktop) */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #0f3b2b;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2d3e3a;
+  font-weight: 500;
+  transition: 0.2s;
+  font-size: 1rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #b57d4b;
+  border-bottom: 2px solid #b57d4b;
+  padding-bottom: 4px;
+}
+
+/* --- Banners & Headers --- */
+.intro-banner {
+  /* Neutral black overlay (no green) */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('brunei-intro.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 5rem 2rem;
+  border-radius: 18px;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.intro-banner h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.intro-banner p {
+  font-size: 1.2rem;
+  max-width: 750px;
+  margin: 0 auto 2rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.banner-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  background: #c49a6c;
+  color: #0f2c22;
+  font-weight: 600;
+  padding: 0.8rem 1.8rem;
+  border-radius: 60px;
+  text-decoration: none;
+  transition: 0.2s;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background: #dbb78b;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid #c49a6c;
+  color: #c49a6c;
+}
+
+.btn-outline:hover {
+  background: #c49a6c;
+  color: #0f2c22;
+}
+
+.btn-sm {
+  padding: 0.5rem 1.4rem;
+  font-size: 0.9rem;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* --- Typography & Section Titles --- */
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 2.5rem 0 1.2rem;
+  color: #0f3b2b;
+}
+
+.section-title.no-margin {
+  margin: 0;
+}
+
+.text-muted {
+  color: #6b7a74;
+}
+
+/* --- Cards (Attractions & Overview) --- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin: 1.5rem 0 3rem;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 1.4rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  border: 1px solid #eee9e0;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #d8c9b6;
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1.2rem;
+}
+
+.card i {
+  font-size: 2rem;
+  color: #b57d4b;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #183a2e;
+}
+
+.card p {
+  color: #4f5e59;
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.badge {
+  display: inline-block;
+  background: #eae3d7;
+  color: #4a3a2a;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.8rem;
+  border-radius: 30px;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  align-self: flex-start;
+}
+
+/* --- Info Boxes & Events --- */
+.info-box {
+  background: white;
+  border-radius: 18px;
+  padding: 1.8rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.02);
+  border: 1px solid #eee9e0;
+  margin: 1.5rem 0;
+}
+
+.info-box.no-margin {
+  margin: 0;
+}
+
+.page-banner-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 2rem;
+}
+
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.event-item {
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+  border-bottom: 1px dashed #d8d0c4;
+  padding-bottom: 1.4rem;
+}
+
+.event-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.event-date {
+  background: #0f3b2b;
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 0.7rem 1rem;
+  text-align: center;
+  min-width: 70px;
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.event-date span {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.event-details h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  color: #183a2e;
+}
+
+.event-details p {
+  color: #5b6b65;
+  font-size: 0.9rem;
+}
+
+/* --- Contact & Forms --- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.contact-info-item i {
+  font-size: 1.2rem;
+  color: #b57d4b;
+  background: #f1ede6;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.contact-info-item strong {
+  display: block;
+  margin-bottom: 0.1rem;
+}
+
+.social-links {
+  margin-top: 1.8rem;
+}
+
+.social-title {
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.4rem;
+  color: #b57d4b;
+}
+
+.form-group {
+  margin-bottom: 1.3rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: #1e2f2a;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #ddd6cb;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: white;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #b57d4b;
+}
+
+.form-group textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-feedback {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  color: #1f6d4b;
+  font-weight: 500;
+}
+
+/* --- Plan --- */
+.plan-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.plan-card {
+  background: #f3efe9;
+  padding: 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+  border: 2px solid transparent;
+}
+
+.plan-card.selected {
+  border-color: #b57d4b;
+  background: #f5ede2;
+}
+
+.plan-card i {
+  font-size: 1.8rem;
+  color: #b57d4b;
+  margin-bottom: 0.6rem;
+}
+
+.plan-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.plan-card p {
+  font-size: 0.85rem;
+  color: #596964;
+}
+
+.plan-summary {
+  background: white;
+  border-radius: 18px;
+  padding: 1.8rem;
+  margin-top: 1.5rem;
+  border: 1px solid #e2d9cd;
+}
+
+.plan-summary h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  color: #183a2e;
+}
+
+.plan-summary ul {
+  margin-top: 1rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.plan-summary li {
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #33443e;
+}
+
+.plan-summary li i {
+  color: #2b6b52;
+  margin-top: 4px;
+}
+
+.plan-summary .plan-note {
+  margin-top: 1rem;
+  font-size: 0.88rem;
+  color: #6b7a74;
+}
+
+/* --- Page Intro --- */
+.page-intro {
+  padding: 2rem 0 0.5rem;
+}
+
+.page-intro .text-muted {
+  font-size: 1.05rem;
+  max-width: 700px;
+}
+
+/* --- Utilities --- */
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.mt-3 {
+  margin-top: 2rem;
+}
+
+/* --- Footer --- */
+.footer {
+  margin-top: 4rem;
+  padding: 3rem 0 1.5rem;
+  border-top: 1px solid #e0d8ce;
+  
+  /* Using black overlay (0,0,0) instead of green so the forest looks natural */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), url('green-footer.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #e0d8ce;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-links h4 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #c49a6c;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* --- Responsive Design (Mobile) --- */
+@media (max-width: 900px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .intro-banner h1 {
+    font-size: 2rem;
+  }
+
+  .event-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
